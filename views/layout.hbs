@@ -1,0 +1,73 @@
+<!--   
+   Largely based on a simple starter template.
+   https://materializecss.com/templates/starter-template/preview.html
+
+   See the files in index_progress for a progressive build of this file.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>{{title}}</title>
+  <link rel="shortcut icon" type="image/jpg" href="/images/favicon.ico" />
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="/styles/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Shared site-wide CSS  -->
+  <link rel="stylesheet" href="/styles/main.css">
+
+  {{#if style}}
+  <link rel="stylesheet" href="/styles/{{style}}.css">
+  {{/if}}
+
+  {{#each styles}}
+  <link rel="stylesheet" href="/styles/{{this}}.css">
+  {{/each}}
+</head>
+
+<body>
+
+  <!-- https://materializecss.com/navbar.html -->
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <img class="hide-on-small-and-down" src="/images/dumbell.jpg">
+        <a href="/" class="brand-logo">Fitness Tracker</a>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="desktop-nav" class="right hide-on-med-and-down">
+          <li><a href="/workouts"><i class="material-icons left">event</i>Workouts</a></li>
+          <li><a href="/attendees"><i class="material-icons left">people</i>Attendees</a></li>
+          <li><a href="/projects"><i class="material-icons left">build</i>Projects</a></li>
+          <li><a href="/login" class="btn">New Workout</a></li>
+        </ul>
+      </div>
+    </nav>
+    <ul id="mobile-nav" class="sidenav">
+      <li><a href="/workouts"><i class="material-icons left">event</i>Workouts</a></li>
+      <li><a href="/attendees"><i class="material-icons left">people</i>Attendees</a></li>
+      <li><a href="/projects"><i class="material-icons left">build</i>Projects</a></li>
+      <li><a href="/login" class="btn">Login / Register</a></li>
+    </ul>
+  </header>
+
+  <main>
+    {{{body}}}
+  </main>
+
+  <!-- https://materializecss.com/footer.html -->
+  <footer class="page-footer">
+  
+  </footer>
+
+  <!-- Compiled and minified Materialize JavaScript -->
+  <script src="/js/materialize.min.js"></script>
+
+  <!-- initialize Materialize elements -->
+  <script> M.AutoInit();</script>
+
+</body>
+
+</html>
